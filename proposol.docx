@@ -1,1 +1,22 @@
 
+The project will display the various businesses on the website. Visitors will be able to search different types of business based on the searching information they provide. 
+
+There are many reasons that this information is relevant. One of the reasons is many people want to know that the food place they want to eat has free wi-fi availability or not. The search result  will provide them the information about the stuff they are looking for in this case free wi-fi, and using this information they can enjoy their meal  while accessing the internet. Another interesting part of the project is to find the similar types of restaurant that users recently liked it. People prefer certain types of food. Based on their preferences, it is very useful if we could recommend them a similar food place where they could get the food they enjoy most.
+
+Data mining tasks that are performed in this project will be to display business based on the user provided search string. Another aspect of this project is to recommend users to other businesses based on their preferences. 
+
+At the end of the semester, a site will be running either on my server or github server which will display businesses based on the user provided keyword and display restaurants based on the user preferences.
+ 
+
+There are some challenges to accomplish this websites. First one is the time constraint. I think the time will be some hurdle to complete the project because at this time I would not know whether  I will get stuck on certain part of the implementation or not. The second one is to understand the contents of data mining. I need to understand on how the collaborating filtering works. Knowing the details of collaborating filtering also takes some time.
+
+Getting a good book as a reference will provide details solution of the topic I am going to study. This will not only give me the insight of how collaborating filtering works but also gives me the solution on what I exactly I want to accomplish on this project.
+
+The project will be finished in numerous subtask. First of all the json file needs to be converted into csv file. Then using some library function of the programming language, the text file should be converted into the data structures. Applying formulas and algorithms provided in the book will solve some of the challenging parts of the project.
+
+
+
+
+
+
+
