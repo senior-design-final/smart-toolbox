@@ -1,1 +1,72 @@
 
+                                               Progress Report:
+
+Any system that predict the items or services is called a recommender system. In this project, I am going to build the recommender system based on Collaborative filtering. Collaborative filtering is categorized into two groups. One is memory based algorithms and another one is model based methods.
+
+In the memory based methods, the entire rating matrix is built and the system use that rating matrix to recommend products to the user. Rating matrix is built from the ratings given by the user. In this dataset, various users id provide rating to the business. These ratings are ordinal values from 1 to 5. 
+
+Deliverables:
+This project will be completed by May 5. On April 2nd, the progress report will be submitted that shows the progress of the project so far.
+
+Challenges of the project.
+Collaborative filtering is challenging to implement itself. The dataset we are using is real dataset which is large and hence the user rating matrix will be really large. This will definitely affect the performance of the system. Furthermore. collaborative filtering works with the preferences given by past users and also depend on the preferences given by the new user in order to capture the new users’ next preferences. That means, if the new users have not rated enough items or services, it is hard to predict the new users’ next choice.
+
+Methods and Algorithms:
+In this project, I have implemented item based  collaborative filtering algorithm. Collaborating filtering works by building a huge dataset in the database and recognizes the pattern in which the previous users’ rating is compared for its decision making. Suppose user A has liked certain restaurants previously, then the key to recommend user A with other types of restaurant is to look at the neighbor users who have previously liked and used the restaurants. When the program gets this information, then those businesses are withdrawn from the dataset and are displayed to the user. 
+
+However, one of the main challenges of implementing this algorithm was the performance. Since the dataset we are given was extremely large, there has been some compromise on the performance. Furthermore, in order to accurately recommend, we need more dataset that will have millions of potential neighbors. This algorithms effectively work on tens of thousands of neighbors in real time, but searching for tens of millions of people and their  preferences is certainly a tedious task for the computer. 
+
+Detailed Description:
+Let me briefly describe the details of the algorithm used in this project. The project uses item-based collaborative filtering. Item based collaborative filtering searches the set of items the target user has rated and computes how similar they are to the user that recommendation is building.The similarity between two items i and j is to first isolate the users who have rated both of these items and then apply a similarity computation technique to determine the similarity. 
+
+
+
+
+In the above diagram, columns represent items and rows represent user id. This table has user1, user3 and user4   who have rated items i and j. Then we will use similarity technique to predict items for new user.
+
+Calculation of Cosine Similarity For Collaborative Filtering:
+Weighted Sum:
+This method predicts item i for user u by computing the sum of items given by user on the items similar to i. Each rating is weighted by corresponding similarity sI,J between item i and j.
+
+Initial Implementation:
+The first challenging task was to successfully load data into the system. I was planning to save the entire data into the database, but later on thought that it would be the waste of space. So I initiated entire data and created the map data structure. BigData.java has those methods implemented. It creates the map structure of entire file and makes user as a key and its corresponding values as values. Similarly, other map structures are created for other files such as reviews, business, and tip and so on. These implementations can be seen in BigData.java.
+
+Evaluation Plan:
+Since the project is due on May 5th and I have already implemented the small web interface where the user will provide the user id which is unique to the entire system, all I have to do is to implement the algorithm. The implementation of algorithm will be done by May 5th. 
+
+change of plan since the project proposal:
+There is no change in implementation of the project. The project will recommend businesses to user based on his/her preferences.
+
+difficulties encountered and how you addressed them (or failed to address them), other issues 
+The performance was the issue. If I had downloaded the entire file into the database, the site would run really slowly because it has to search to tens of thousands of users in the database sequentially, but since I implemented the map and finding a particular using is just 0(1), the site’s performance will significantly improve.
+
+what are left to be done?
+At this point, I am mid way to the implementation of algorithm. I can successfully calculate and display cosine similarity for item based prediction. I can use this similarity to predict the businesses which I have not implemented yet. 
+ 
+how do you plan to finish the project?
+By the end of the project, I will have a good user interface built along with the implementation of item based collaborative filtering algorithm.
+
+ expected challenges ahead
+I think the most challenging part was to implement the item based collaborative filtering,but I am about to finish this part on the date i am writing this progress report. The project will be delivered on time along. 
+
+The project directory will be saved in GitHub and the site will probably run on my server kite.infinite-data.com/
+
+
+
+
+
+
+
+
+
+
+
+
+
+References:
+Item-Based Collaborative Filtering Recommendation Algorithms GroupLens Research Group/Army HPC Research Center Department of Computer Science and Engineering University of Minnesota, Minneapolis, MN 55455
+
+The above research can be viewed in this link:
+http://files.grouplens.org/papers/www10_sarwar.pdf
+
+
